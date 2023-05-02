@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/LeonardoC1302/musicFestival#readme",
   "devDependencies": {
+    "gulp": "^4.0.2",
     "sass": "^1.62.1"
   }
 }
