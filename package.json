@@ -1,0 +1,26 @@
+{
+  "name": "musicfestival",
+  "version": "1.0.0",
+  "description": "Project with SASS, Gulp and HTML",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass src/scss:build/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/LeonardoC1302/musicFestival.git"
+  },
+  "keywords": [
+    "SASS",
+    "Gulp"
+  ],
+  "author": "Leonardo Céspedes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeonardoC1302/musicFestival/issues"
+  },
+  "homepage": "https://github.com/LeonardoC1302/musicFestival#readme",
+  "devDependencies": {
+    "sass": "^1.62.1"
+  }
+}
