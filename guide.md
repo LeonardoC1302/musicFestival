@@ -5,6 +5,7 @@
 - "sass": "sass src/scss:build/css" --> reads the first file and saves the compiled version on the second one
 - "sass": "sass --watch src/scss:build/css" --> keeps checking for changes on the sass file and compiles it when needed
 - npm run \<name> ---> used to run an script
+- Use '_' at the start of a file name to indicate that is not the main sass file
 
 ### GULP
 - npm i --D gulp --> install gulp as a development dependency

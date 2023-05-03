@@ -1,5 +1,8 @@
-$red: red;
+// Previous Version
 
-body {
-    background-color: $red;
-}
+// @import "base/variables";
+// @import "content/_content";
+
+// New Version
+@use 'base';
+@use 'content';
