@@ -9,3 +9,4 @@
 ### GULP
 - npm i --D gulp --> install gulp as a development dependency
 - npx gulp \<name> --> execute a gulp function or task
+- If a script is made, npm run \<name> can be used to execute the gulp task
