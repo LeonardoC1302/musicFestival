@@ -11,19 +11,19 @@
 // }
 
 @mixin phone {
-    @media (max-width: v.$phone) {
+    @media (min-width: v.$phone) {
         @content;
     }
 }
 
 @mixin tablet {
-    @media (max-width: v.$tablet) {
+    @media (min-width: v.$tablet) {
         @content;
     }
 }
 
 @mixin desktop {
-    @media (max-width: v.$desktop) {
+    @media (min-width: v.$desktop) {
         @content;
     }
 }

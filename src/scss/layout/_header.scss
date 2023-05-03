@@ -5,13 +5,35 @@
     background-color: v.$green;
     h1 {
         color: v.$white;
+        text-align: center;
+        @include m.tablet {
+            margin: 0;
+        }
+    }
+    .header-content {
+        padding: 2rem;
+        @include m.tablet {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
 }
 
 .main-navigation {
+    @include m.tablet {
+        display: flex;
+        gap:2rem;
+    }
     a {
+        display: block;
+        text-align: center;
         color: v.$white;
         font-size: 2.4rem;
+        margin-bottom: 1rem;
+        @include m.tablet {
+            margin: 0;
+        }
 
         &:hover { // &:hover is a parent selector, deletes the space on the CSS
             color: v.$yellow;
