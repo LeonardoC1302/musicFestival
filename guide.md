@@ -11,3 +11,9 @@
 - npm i --D gulp --> install gulp as a development dependency
 - npx gulp \<name> --> execute a gulp function or task
 - If a script is made, npm run \<name> can be used to execute the gulp task
+
+### Images
+- npm i --D gulp-webp
+- npm i --D gulp-imagemin@7.1.0
+- npm i --D gulp-cache 
+- npm i --D gulp-avif
