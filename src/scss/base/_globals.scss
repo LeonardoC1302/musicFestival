@@ -10,6 +10,9 @@ html {
 body {
     font-family: v.$primary-font;
     font-size: 1.6rem;
+    &.fixed-body {
+        overflow: hidden;
+    }
 }
 
 p {
