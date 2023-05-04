@@ -47,13 +47,21 @@ function avifVersion(done){
     done();
 }
 
+function javascript(done){
+    src('src/js/**/*.js') // Identify all the JS files
+        .pipe( dest('build/js') ); // Save JS
+    done(); // Finish task  
+}
+
 function dev(done){
     watch('src/scss/**/*.scss', css); // Watch changes in SASS files
+    watch('src/js/**/*.js', javascript); // Watch changes in JS files
     done(); // Finish task
 }
 
 exports.css = css; // Export task
-exports.dev = parallel(images, webpVersion, avifVersion, dev); // Export task
+exports.javascript = javascript; // Export task
+exports.dev = parallel(images, webpVersion, avifVersion, javascript, dev); // Export task
 exports.webpVersion = webpVersion; // Export task
 exports.avifVersion = avifVersion; // Export task
 exports.images = images; // Export task
