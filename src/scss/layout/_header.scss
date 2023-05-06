@@ -2,6 +2,15 @@
 @use 'base/mixins' as m;
 
 .header {
+    @include m.tablet {     
+        &.fixed {
+            left: 0;
+            top: 0;
+            position: fixed;
+            width: 100%;
+            box-shadow: .1rem .2rem .1rem #333;
+        }
+    }
     background-color: v.$green;
     h1 {
         color: v.$white;

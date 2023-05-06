@@ -13,6 +13,9 @@ body {
     &.fixed-body {
         overflow: hidden;
     }
+    &.body-scroll {
+        padding-top: 8.6rem; // height of the header
+    }
 }
 
 p {
