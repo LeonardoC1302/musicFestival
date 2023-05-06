@@ -17,3 +17,8 @@
 - npm i --D gulp-imagemin@7.1.0
 - npm i --D gulp-cache 
 - npm i --D gulp-avif
+
+### Performance
+- npm i --D cssnano autoprefixer postcss gulp-postcss
+- npm i --D gulp-sourcemaps
+- npm i --D gulp-terser-js

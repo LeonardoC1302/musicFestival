@@ -2,17 +2,28 @@ const { src, dest, watch, parallel } = require('gulp'); // Load gulp
 
 // CSS
 const sass = require('gulp-sass')(require('sass')); // Load gulp-sass
-const plumber = require('gulp-plumber'); // Load gulp-plumber
+const plumber = require('gulp-plumber'); // Load gulp-plumber}
+const autoprefixer = require('autoprefixer'); // Load autoprefixer
+const cssnano = require('cssnano'); // Load cssnano
+const postcss = require('gulp-postcss'); // Load gulp-postcss
+const sourcemaps = require('gulp-sourcemaps'); // Load gulp-sourcemaps
+
 // IMAGES
 const cache = require('gulp-cache'); // Load gulp-cache
 const imagemin = require('gulp-imagemin'); // Load gulp-imagemin
 const webp = require('gulp-webp'); // Load gulp-webp
 const avif = require('gulp-avif'); // Load gulp-avif
 
+// JAVASCRIPT
+const terser = require('gulp-terser-js'); // Load gulp-terser
+
 function css(done){
     src('src/scss/**/*.scss') // Identify all the SASS files
+        .pipe( sourcemaps.init() ) // Initialize sourcemaps
         .pipe( plumber() ) // Prevent pipe breaking caused by errors from gulp plugins
         .pipe( sass() ) // Compile SASS to CSS
+        .pipe( postcss([autoprefixer(), cssnano()]) ) // Add prefixes and minify CSS
+        .pipe( sourcemaps.write('.') ) // Write sourcemaps
         .pipe( dest('build/css') ); // Save CSS
     done(); // Finish task
 }
@@ -49,6 +60,9 @@ function avifVersion(done){
 
 function javascript(done){
     src('src/js/**/*.js') // Identify all the JS files
+        .pipe( sourcemaps.init() ) // Initialize sourcemaps
+        .pipe(terser()) // Minify JS
+        .pipe( sourcemaps.write('.') ) // Write sourcemaps
         .pipe( dest('build/js') ); // Save JS
     done(); // Finish task  
 }
